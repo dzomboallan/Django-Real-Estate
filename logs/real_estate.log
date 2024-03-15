@@ -316,3 +316,64 @@ AttributeError: 'User' object has no attribute 'usernames'
 2024-03-14 16:14:23,894 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/profiles/models.py changed, reloading.
 2024-03-14 16:14:24,456 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-03-14 16:14:47,766 django.request WARNING  Not Found: /favicon.ico
+2024-03-15 13:38:51,406 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-15 13:44:52,429 django.request ERROR    Internal Server Error: /api/v1/auth/users/
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/utils/module_loading.py", line 16, in cached_import
+    return getattr(module, class_name)
+AttributeError: module 'django.core.mail.backends.smtp' has no attribute 'EmailBackends'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 133, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 471, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 482, in raise_uncaught_exception
+    raise exc
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/djoser/views.py", line 140, in perform_create
+    settings.EMAIL.activation(self.request, context).send(to)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/templated_mail/mail.py", line 78, in send
+    super(BaseEmailMessage, self).send(*args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/mail/message.py", line 300, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/mail/message.py", line 257, in get_connection
+    self.connection = get_connection(fail_silently=fail_silently)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/mail/__init__.py", line 51, in get_connection
+    klass = import_string(backend or settings.EMAIL_BACKEND)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/utils/module_loading.py", line 32, in import_string
+    raise ImportError(
+ImportError: Module "django.core.mail.backends.smtp" does not define a "EmailBackends" attribute/class
+2024-03-15 13:47:46,865 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/real_estate/settings/development.py changed, reloading.
+2024-03-15 13:47:47,477 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-15 13:48:00,224 django.request WARNING  Bad Request: /api/v1/auth/users/
+2024-03-15 13:54:17,018 django.request WARNING  Not Found: /activate/Mw/c3xnqx-2f008d1121f0d83c046801db855b8108
+2024-03-15 13:54:17,107 django.request WARNING  Not Found: /favicon.ico
+2024-03-15 13:56:42,623 django.request WARNING  Bad Request: /api/v1/auth/users/
+2024-03-15 14:01:45,469 django.request ERROR    Internal Server Error: /api/v1/auth/users/reset_password
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/v1/auth/users/reset_password/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2024-03-15 14:03:34,387 django.request WARNING  Not Found: /password/reset/confirm/Mw/c3xoc6-9f045e9adc632d6ae4074fbf3e068deb
