@@ -377,3 +377,6 @@ Traceback (most recent call last):
     raise RuntimeError(
 RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/v1/auth/users/reset_password/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
 2024-03-15 14:03:34,387 django.request WARNING  Not Found: /password/reset/confirm/Mw/c3xoc6-9f045e9adc632d6ae4074fbf3e068deb
+2024-03-16 15:54:03,288 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:55:33,371 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
+2024-03-16 16:01:30,635 django.request WARNING  Unauthorized: /api/v1/profile/me/
