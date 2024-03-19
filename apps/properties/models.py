@@ -5,11 +5,11 @@ from autoslug import AutoSlugField
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator
 from django.utils.translation import gettext_lazy as _
-from django_countries import CountryField
+from django_countries.fields import CountryField
 from apps.common.models import TimeStampedUUIDModel
 
 # Create your models here.
-User = get_user_model
+User = get_user_model()
 
 class PropertyPublishedManager(models.Manager):
     def get_queryset(self):
@@ -37,7 +37,7 @@ class Property(TimeStampedUUIDModel):
         User,
         verbose_name=_("Agent, Seller or Buyer"),
         related_name="agent_buyer",
-        on_delete=models.DO,
+        on_delete=models.DO_NOTHING,
     )
 
     title = models.CharField(
@@ -102,7 +102,7 @@ class Property(TimeStampedUUIDModel):
     tax = models.DecimalField(
         verbose_name=_("Property tax"),
         max_digits=6,
-        decimail_places=2,
+        decimal_places=2,
         default=0.15,
         help_text="15% property tax charged",
     )
