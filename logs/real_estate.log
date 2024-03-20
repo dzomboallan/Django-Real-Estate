@@ -614,3 +614,11 @@ Traceback (most recent call last):
 apps.properties.models.Property.DoesNotExist: Property matching query does not exist.
 2024-03-20 12:25:00,702 django.request WARNING  Forbidden: /api/v1/properties/update/test-property/
 2024-03-20 12:28:50,278 django.request WARNING  Method Not Allowed: /api/v1/properties/delete/my-very-big-property/
+2024-03-20 12:47:51,393 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 12:48:15,414 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 12:48:25,825 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 12:53:15,711 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 12:53:19,355 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 12:55:30,103 django.request WARNING  Not Found: /api/v1/properties/agents/	1448297a-528e-483d-af43-20386efeef94/
+2024-03-20 12:56:02,127 django.request WARNING  Not Found: /api/v1/properties/agents/	1448297a-528e-483d-af43-20386efeef94/
+2024-03-20 12:59:55,947 django.request WARNING  Unauthorized: /api/v1/enquiries/
