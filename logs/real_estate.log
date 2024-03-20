@@ -380,3 +380,237 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2024-03-16 15:54:03,288 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-03-16 15:55:33,371 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
 2024-03-16 16:01:30,635 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2024-03-19 10:41:50,359 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-19 10:42:30,809 django.request WARNING  Not Found: /favicon.ico
+2024-03-19 10:46:45,350 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/properties/models.py changed, reloading.
+2024-03-19 10:46:46,178 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-19 10:47:34,446 django.request WARNING  Not Found: /favicon.ico
+2024-03-19 10:48:06,189 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-03-19 10:48:25,202 django.request WARNING  Not Found: /mediafiles/interior_sample.jpg
+2024-03-19 10:48:47,412 django.request WARNING  Not Found: /mediafiles/interior_sample.jpg
+2024-03-19 10:50:28,329 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/properties/models.py changed, reloading.
+2024-03-19 10:50:29,152 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-19 10:51:10,922 django.request WARNING  Not Found: /mediafiles/interior_sample.jpg
+2024-03-19 10:51:17,075 django.request WARNING  Not Found: /favicon.ico
+2024-03-19 10:51:23,408 django.request WARNING  Not Found: /mediafiles/interior_sample.jpg
+2024-03-19 10:52:51,203 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 10:50:02,896 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 10:50:11,064 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 10:51:33,761 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
+2024-03-20 10:55:24,527 django.request WARNING  Not Found: /api/v1/properties/create/
+2024-03-20 10:55:58,525 django.request WARNING  Not Found: /api/v1/properties/create/
+2024-03-20 10:57:47,577 django.request WARNING  Not Found: /api/v1/properties/create/
+2024-03-20 11:00:37,813 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 11:00:45,849 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 11:00:52,787 django.request WARNING  Not Found: /favicon.ico
+2024-03-20 11:02:00,978 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/real_estate/urls.py changed, reloading.
+2024-03-20 11:02:01,552 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 11:03:44,018 django.request ERROR    Internal Server Error: /api/v1/properties/all/
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 471, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 482, in raise_uncaught_exception
+    raise exc
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/generics.py", line 196, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/mixins.py", line 48, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 846, in data
+    ret = super().data
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 313, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in to_representation
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in <listcomp>
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 578, in to_representation
+    for field in fields:
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 431, in _readable_fields
+    for field in self.fields.values():
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 419, in fields
+    for key, value in self.get_fields().items():
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1158, in get_fields
+    field_class, field_kwargs = self.build_field(source, info, model, depth)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1296, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1434, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `profile_photo` is not valid for model `Property`.
+2024-03-20 11:11:03,909 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/properties/models.py changed, reloading.
+2024-03-20 11:11:04,578 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 11:11:41,832 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 11:11:49,561 django.request ERROR    Internal Server Error: /api/v1/properties/all/
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 471, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 482, in raise_uncaught_exception
+    raise exc
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/generics.py", line 196, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/mixins.py", line 48, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 846, in data
+    ret = super().data
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 313, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in to_representation
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in <listcomp>
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 578, in to_representation
+    for field in fields:
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 431, in _readable_fields
+    for field in self.fields.values():
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 419, in fields
+    for key, value in self.get_fields().items():
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1158, in get_fields
+    field_class, field_kwargs = self.build_field(source, info, model, depth)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1296, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1434, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `profile_photo` is not valid for model `Property`.
+2024-03-20 12:09:14,802 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 12:09:21,445 django.request ERROR    Internal Server Error: /api/v1/properties/all/
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 471, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 482, in raise_uncaught_exception
+    raise exc
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/generics.py", line 196, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/mixins.py", line 48, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 846, in data
+    ret = super().data
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 313, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in to_representation
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in <listcomp>
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 578, in to_representation
+    for field in fields:
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 431, in _readable_fields
+    for field in self.fields.values():
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 419, in fields
+    for key, value in self.get_fields().items():
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1158, in get_fields
+    field_class, field_kwargs = self.build_field(source, info, model, depth)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1296, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1434, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `profile_photo` is not valid for model `Property`.
+2024-03-20 12:11:35,410 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/properties/serializers.py changed, reloading.
+2024-03-20 12:11:36,040 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 12:11:43,841 django.request ERROR    Internal Server Error: /api/v1/properties/all/
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 471, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 482, in raise_uncaught_exception
+    raise exc
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/generics.py", line 196, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/mixins.py", line 48, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 846, in data
+    ret = super().data
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 313, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in to_representation
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 770, in <listcomp>
+    return [self.child.to_representation(item) for item in iterable]
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/serializers.py", line 580, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/fields.py", line 486, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/fields.py", line 112, in get_attribute
+    instance = getattr(instance, attr)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/properties/models.py", line 210, in final_property_price
+    price_after_tax = float(property_price + tax_amount, 2)
+TypeError: float expected at most 1 argument, got 2
+2024-03-20 12:13:29,320 django.utils.autoreload INFO     /home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/properties/models.py changed, reloading.
+2024-03-20 12:13:29,861 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-20 12:20:59,162 django.request ERROR    Internal Server Error: /api/v1/properties/details/your-property-slug/
+Traceback (most recent call last):
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 471, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 482, in raise_uncaught_exception
+    raise exc
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/apps/properties/views.py", line 73, in get
+    property = Property.objects.get(slug=slug)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hunnytaggy/Desktop/All/django_real_estate/estate-src/estateEnv/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+apps.properties.models.Property.DoesNotExist: Property matching query does not exist.
+2024-03-20 12:25:00,702 django.request WARNING  Forbidden: /api/v1/properties/update/test-property/
+2024-03-20 12:28:50,278 django.request WARNING  Method Not Allowed: /api/v1/properties/delete/my-very-big-property/

@@ -153,25 +153,25 @@ class Property(TimeStampedUUIDModel):
     )
 
     photo1 = models.ImageField(
-        default="interior_sample.jpg",
+        default="/interior_sample.jpg",
         null=True,
         blank=True,
     )
 
     photo2 = models.ImageField(
-        default="interior_sample.jpg",
+        default="/interior_sample.jpg",
         null=True,
         blank=True,
     )
 
     photo3 = models.ImageField(
-        default="interior_sample.jpg",
+        default="/interior_sample.jpg",
         null=True,
         blank=True,
     )
 
     photo4 = models.ImageField(
-        default="interior_sample.jpg",
+        default="/interior_sample.jpg",
         null=True,
         blank=True,
     )
@@ -198,7 +198,7 @@ class Property(TimeStampedUUIDModel):
 
     def save(self, *args, **kwargs):
         self.title = str.title(self.title)
-        self.description = str.description(self.description)
+        self.description = str.capitalize(self.description)
         self.ref_code = "".join(random.choices(string.ascii_uppercase + string.digits, k=10))
         super(Property, self).save(*args, **kwargs)
 
@@ -207,8 +207,8 @@ class Property(TimeStampedUUIDModel):
         tax_percentage = self.tax
         property_price = self.price
         tax_amount = round(tax_percentage * property_price, 2)
-        price_after_tax = float(property_price + tax_amount, 2)
-        return 
+        price_after_tax = float(round(property_price + tax_amount, 2))
+        return price_after_tax 
     
 class PropertyViews(TimeStampedUUIDModel):
     ip = models.CharField(
