@@ -624,3 +624,12 @@ apps.properties.models.Property.DoesNotExist: Property matching query does not e
 2024-03-20 12:59:55,947 django.request WARNING  Unauthorized: /api/v1/enquiries/
 2024-03-21 12:38:18,515 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-03-21 12:41:09,153 django.request WARNING  Not Found: /favicon.ico
+2024-03-21 12:48:50,215 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-21 13:19:23,795 django.utils.autoreload INFO     /app/apps/enquiries/models.py changed, reloading.
+2024-03-21 13:19:28,859 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-21 13:20:08,103 django.utils.autoreload INFO     /app/real_estate/urls.py changed, reloading.
+2024-03-21 13:20:10,559 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-21 13:22:54,718 django.utils.autoreload INFO     /app/apps/enquiries/admin.py changed, reloading.
+2024-03-21 13:22:56,300 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-21 13:26:56,126 django.utils.autoreload INFO     /app/real_estate/settings/base.py changed, reloading.
+2024-03-21 13:26:57,361 django.utils.autoreload INFO     Watching for file changes with StatReloader

@@ -10,6 +10,7 @@ from .models import Rating
 # create your views here.
 User = get_user_model()
 
+
 # create agent review
 @api_view(["POST"])
 @permission_classes([permissions.IsAuthenticated])

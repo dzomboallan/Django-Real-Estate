@@ -1,37 +1,41 @@
 import random
 import string
-from django.db import models
+
 from autoslug import AutoSlugField
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator
+from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django_countries.fields import CountryField
+
 from apps.common.models import TimeStampedUUIDModel
 
 # Create your models here.
 User = get_user_model()
 
+
 class PropertyPublishedManager(models.Manager):
     def get_queryset(self):
-        return(
+        return (
             super(PropertyPublishedManager, self)
             .get_queryset()
             .filter(published_status=True)
         )
-    
+
+
 class Property(TimeStampedUUIDModel):
     class AdvertType(models.TextChoices):
-        FOR_SALE="For Sale", _("For Sale")
-        FOR_RENT="For Rent", _("For Rent")
-        AUCTION="Auction", _("Auction")
+        FOR_SALE = "For Sale", _("For Sale")
+        FOR_RENT = "For Rent", _("For Rent")
+        AUCTION = "Auction", _("Auction")
 
     class PropertyType(models.TextChoices):
-        HOUSE="House", _("Huose")
-        APARTMENT="Apartment", _("Apartment")
-        OFFICE="Office", _("Office")
-        WAREHOUSE="Warehouse", _("Warehouse")
-        COMMERCIAL="Commercial", _("Commercial")
-        OTHER="Other", _("Other")
+        HOUSE = "House", _("Huose")
+        APARTMENT = "Apartment", _("Apartment")
+        OFFICE = "Office", _("Office")
+        WAREHOUSE = "Warehouse", _("Warehouse")
+        COMMERCIAL = "Commercial", _("Commercial")
+        OTHER = "Other", _("Other")
 
     user = models.ForeignKey(
         User,
@@ -58,7 +62,7 @@ class Property(TimeStampedUUIDModel):
     )
 
     description = models.TextField(
-        verbose_name=_("description"), 
+        verbose_name=_("description"),
         default="Default description...update me please",
     )
 
@@ -71,7 +75,7 @@ class Property(TimeStampedUUIDModel):
     city = models.CharField(
         verbose_name=_("City"),
         max_length=180,
-        default = "Nairobi",
+        default="Nairobi",
     )
 
     postal_code = models.CharField(
@@ -133,9 +137,9 @@ class Property(TimeStampedUUIDModel):
 
     advert_type = models.CharField(
         verbose_name=_("Advert Type"),
-         max_length=50,
-         choices = AdvertType.choices,
-         default=AdvertType.FOR_SALE,
+        max_length=50,
+        choices=AdvertType.choices,
+        default=AdvertType.FOR_SALE,
     )
 
     property_type = models.CharField(
@@ -144,7 +148,7 @@ class Property(TimeStampedUUIDModel):
         choices=PropertyType.choices,
         default=PropertyType.OTHER,
     )
-    
+
     cover_photo = models.ImageField(
         verbose_name=_("Main Photo"),
         default="/house_sample.jpg",
@@ -191,7 +195,7 @@ class Property(TimeStampedUUIDModel):
 
     def __str__(self):
         return self.title
-    
+
     class Meta:
         verbose_name = "Property"
         verbose_name_plural = "Properties"
@@ -199,7 +203,9 @@ class Property(TimeStampedUUIDModel):
     def save(self, *args, **kwargs):
         self.title = str.title(self.title)
         self.description = str.capitalize(self.description)
-        self.ref_code = "".join(random.choices(string.ascii_uppercase + string.digits, k=10))
+        self.ref_code = "".join(
+            random.choices(string.ascii_uppercase + string.digits, k=10)
+        )
         super(Property, self).save(*args, **kwargs)
 
     @property
@@ -208,12 +214,13 @@ class Property(TimeStampedUUIDModel):
         property_price = self.price
         tax_amount = round(tax_percentage * property_price, 2)
         price_after_tax = float(round(property_price + tax_amount, 2))
-        return price_after_tax 
-    
+        return price_after_tax
+
+
 class PropertyViews(TimeStampedUUIDModel):
     ip = models.CharField(
         verbose_name=_("IP Address"),
-        max_length = 250,
+        max_length=250,
     )
 
     property = models.ForeignKey(
@@ -223,10 +230,8 @@ class PropertyViews(TimeStampedUUIDModel):
     )
 
     def __str__(self):
-        return (
-            f"Total views on - {self.property.title} is - {self.property.views} views(s)"
-        )
-    
+        return f"Total views on - {self.property.title} is - {self.property.views} views(s)"
+
     class Meta:
         verbose_name = "Total views on Property"
         verbose_name_plural = "Total Property Views"
