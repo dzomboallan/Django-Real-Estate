@@ -622,3 +622,5 @@ apps.properties.models.Property.DoesNotExist: Property matching query does not e
 2024-03-20 12:55:30,103 django.request WARNING  Not Found: /api/v1/properties/agents/	1448297a-528e-483d-af43-20386efeef94/
 2024-03-20 12:56:02,127 django.request WARNING  Not Found: /api/v1/properties/agents/	1448297a-528e-483d-af43-20386efeef94/
 2024-03-20 12:59:55,947 django.request WARNING  Unauthorized: /api/v1/enquiries/
+2024-03-21 12:38:18,515 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-21 12:41:09,153 django.request WARNING  Not Found: /favicon.ico
