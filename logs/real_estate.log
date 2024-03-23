@@ -633,3 +633,5 @@ apps.properties.models.Property.DoesNotExist: Property matching query does not e
 2024-03-21 13:22:56,300 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-03-21 13:26:56,126 django.utils.autoreload INFO     /app/real_estate/settings/base.py changed, reloading.
 2024-03-21 13:26:57,361 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 09:14:04,095 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 09:22:52,724 django.utils.autoreload INFO     Watching for file changes with StatReloader
