@@ -1,5 +1,5 @@
 from django_countries.serializer_fields import CountryField
-from rest_framework import serializers
+from rest_framework import fields, serializers
 
 from apps.ratings.serializers import RatingSerializer
 
@@ -27,7 +27,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             "phone_number",
             "profile_photo",
             "about_me",
-            "lincense",
+            "license",
             "gender",
             "country",
             "city",
