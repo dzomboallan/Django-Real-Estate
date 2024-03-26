@@ -1,5 +1,5 @@
 from django_countries.serializer_fields import CountryField
-from rest_framework import fields, serializers
+from rest_framework import serializers
 
 from apps.ratings.serializers import RatingSerializer
 
@@ -43,7 +43,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         first_name = obj.user.first_name.title()
         last_name = obj.user.last_name.title()
 
-        return f"{first_name}{last_name}"
+        return f"{first_name} {last_name}"
 
     def get_reviews(self, obj):
         reviews = obj.agent_review.all()

@@ -25,7 +25,7 @@ class Profile(TimeStampedUUIDModel):
         verbose_name=_("About me"), default="Say something about yourself"
     )
     license = models.CharField(
-        verbose_name=_("Real Estate Lincense"), max_length=20, blank=True, null=True
+        verbose_name=_("Real Estate License"), max_length=20, blank=True, null=True
     )
     profile_photo = models.ImageField(
         verbose_name=_("Profile Photo"), default="/profile_default.png"

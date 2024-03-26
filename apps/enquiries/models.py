@@ -9,7 +9,7 @@ from apps.common.models import TimeStampedUUIDModel
 class Enquiry(TimeStampedUUIDModel):
     name = models.CharField(_("Your Name"), max_length=100)
     phone_number = PhoneNumberField(
-        _("Phone Number"), max_length=30, default="+254796948746"
+        _("Phone Number"), max_length=30, default="+254722200000"
     )
     email = models.EmailField(_("email"))
     subject = models.CharField(_("Subject"), max_length=100)

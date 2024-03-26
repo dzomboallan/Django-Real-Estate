@@ -1,7 +1,6 @@
 import logging
 
 import django_filters
-from django.db.models import query
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, generics, permissions, status
 from rest_framework.decorators import api_view, permission_classes
@@ -66,7 +65,7 @@ class ListAgentsPropertyAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        queryset = Property.objects.filter(user=user).order_by("created_at")
+        queryset = Property.objects.filter(user=user).order_by("-created_at")
         return queryset
 
 

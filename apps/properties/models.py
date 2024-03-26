@@ -52,6 +52,7 @@ class Property(TimeStampedUUIDModel):
     slug = AutoSlugField(
         populate_from="title",
         unique=True,
+        always_update=True,
     )
 
     ref_code = models.CharField(

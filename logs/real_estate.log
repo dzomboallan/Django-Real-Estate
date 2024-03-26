@@ -5663,3 +5663,4 @@ django.core.exceptions.ImproperlyConfigured: Requested setting CELERY_EMAIL_TASK
 2024-03-25 15:43:00,902 django.utils.autoreload INFO     /app/real_estate/celery.py changed, reloading.
 2024-03-25 15:43:02,722 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-03-25 15:44:30,057 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-26 11:59:44,414 django.utils.autoreload INFO     Watching for file changes with StatReloader
